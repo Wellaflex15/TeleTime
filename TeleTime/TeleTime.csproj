@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -148,9 +154,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WorkDayController.cs" />
+    <Compile Include="Controllers\WorkerController.cs" />
+    <Compile Include="Controllers\WorkShiftController.cs" />
+    <Compile Include="DAL\TeleTimeContext.cs" />
+    <Compile Include="DAL\TeleTimeInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\WorkDay.cs" />
+    <Compile Include="Models\Worker.cs" />
+    <Compile Include="Models\WorkShift.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -192,10 +206,24 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Worker\Create.cshtml" />
+    <Content Include="Views\Worker\Delete.cshtml" />
+    <Content Include="Views\Worker\Details.cshtml" />
+    <Content Include="Views\Worker\Edit.cshtml" />
+    <Content Include="Views\Worker\Index.cshtml" />
+    <Content Include="Views\WorkShift\Create.cshtml" />
+    <Content Include="Views\WorkShift\Delete.cshtml" />
+    <Content Include="Views\WorkShift\Details.cshtml" />
+    <Content Include="Views\WorkShift\Edit.cshtml" />
+    <Content Include="Views\WorkShift\Index.cshtml" />
+    <Content Include="Views\WorkDay\Create.cshtml" />
+    <Content Include="Views\WorkDay\Delete.cshtml" />
+    <Content Include="Views\WorkDay\Details.cshtml" />
+    <Content Include="Views\WorkDay\Edit.cshtml" />
+    <Content Include="Views\WorkDay\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
