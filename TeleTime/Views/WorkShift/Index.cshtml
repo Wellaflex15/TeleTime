@@ -9,43 +9,270 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.WorkDayID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WorkerID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TypeOfShift)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Time)
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">WorkDay</th>
+            <th scope="col">Worker</th>
+            <th scope="col">Role</th>
+            <th scope="col">TypeOfShift</th>
+            <th scope="col">Time</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorkDayID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorkerID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TypeOfShift)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Time)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.WorkShiftID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.WorkShiftID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.WorkShiftID })
-        </td>
-    </tr>
-}
-
+        if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Monday)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>@Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Role)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TypeOfShift)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.WorkShiftID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.WorkShiftID })
+                    </td>
+                </tr>
+            </tbody>
+        }
+    }
 </table>
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">WorkDay</th>
+                <th scope="col">Worker</th>
+                <th scope="col">Role</th>
+                <th scope="col">TypeOfShift</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+
+            if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Tuesday)
+            {
+                <tbody>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>@Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Workers.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Workers.Role)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TypeOfShift)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.WorkShiftID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.WorkShiftID })
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        }
+</table>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">WorkDay</th>
+            <th scope="col">Worker</th>
+            <th scope="col">Role</th>
+            <th scope="col">TypeOfShift</th>
+            <th scope="col">Time</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+
+        if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Wednesday)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>@Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Role)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TypeOfShift)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.WorkShiftID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.WorkShiftID })
+                    </td>
+                </tr>
+            </tbody>
+        }
+    }
+</table>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">WorkDay</th>
+            <th scope="col">Worker</th>
+            <th scope="col">Role</th>
+            <th scope="col">TypeOfShift</th>
+            <th scope="col">Time</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+
+        if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Thursday)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>@Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Role)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TypeOfShift)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.WorkShiftID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.WorkShiftID })
+                    </td>
+                </tr>
+            </tbody>
+        }
+    }
+</table>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">WorkDay</th>
+            <th scope="col">Worker</th>
+            <th scope="col">Role</th>
+            <th scope="col">TypeOfShift</th>
+            <th scope="col">Time</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+
+        if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Friday)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>@Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Workers.Role)</td>
+                    <td>@Html.DisplayFor(modelItem => item.TypeOfShift)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.WorkShiftID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.WorkShiftID })
+                    </td>
+                </tr>
+            </tbody>
+        }
+    }
+</table>
+
+
+        @*<tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfShift)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+            </tr>
+            }
+            else if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Tuesday)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfShift)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+            </tr>
+            }
+            else if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Wednesday)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfShift)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+            </tr>
+            }
+            else if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Thursday)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfShift)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+            </tr>
+            }
+            else if (item.WorkDay.NameOfDay == TeleTime.Models.NameOfDay.Friday)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Workers.Role)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfShift)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+            </tr>
+            }*@
+        
+    

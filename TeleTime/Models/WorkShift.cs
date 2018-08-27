@@ -18,7 +18,7 @@ namespace TeleTime.Models
         public TypeOfShift? TypeOfShift { get; set; }
         public string Time { get; set; }
 
-        public virtual ICollection<WorkDay> WorkDays { get; set; }
-        public virtual ICollection<Worker> Workers { get; set; }
+        public virtual WorkDay WorkDay { get; set; }
+        public virtual Worker Workers { get; set; }
     }
 }

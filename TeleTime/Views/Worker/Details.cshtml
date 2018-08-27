@@ -25,6 +25,61 @@
         <dd>
             @Html.DisplayFor(model => model.Role)
         </dd>
+        <dt>
+            WorkShifts
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Type of workshift</th>
+                    <th>Time</th>
+                </tr>
+                @foreach (var item in Model.WorkShifts)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Workers.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Workers.Role)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypeOfShift)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WorkDay.NameOfDay)
+                    </td>
+                </tr>
+                }
+            </table>
+            @*<table class="table">
+                <tr>
+                    <th>Day</th>
+                    <th>Work day?</th>
+                </tr>
+                @foreach (var item in Model.WorkDays)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NameOfDay)
+                        </td>
+                            @if (item.DayOfWork == true)
+                            {
+                                <td>Yes</td>
+                            }
+                            else
+                            {
+                                <td>No</td>
+                            }
+                    </tr>
+                }
+                </table>*@
+        </dd>
 
     </dl>
 </div>

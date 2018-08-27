@@ -25,7 +25,30 @@
         <dd>
             @Html.DisplayFor(model => model.DayOfWork)
         </dd>
-
+        <dt>
+            @Html.DisplayNameFor(model => model.Workers)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+                @foreach (var item in Model.Workers)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Role)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
     </dl>
 </div>
 <p>

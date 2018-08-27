@@ -18,6 +18,6 @@ namespace TeleTime.Models
         public NameOfDay NameOfDay { get; set; }
         public bool DayOfWork { get; set; }
 
-        public virtual ICollection<WorkShift> WorkShifts { get; set; }
+        public virtual ICollection<Worker> Workers { get; set; }
     }
 }
